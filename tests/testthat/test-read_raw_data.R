@@ -12,9 +12,9 @@ test_that("read_raw_data reads data correctly", {
 
 test_that("read_raw_data provides error message", {
 
-  testthat::expect_error(read_raw_data(""),"Please provide a valid url of the data set in the data folder in the github page!")
+  testthat::expect_error(read_raw_data(""),"Please provide a valid path_to_file of the data set in the data folder in the docker container or github page!")
 
-  testthat::expect_error(read_raw_data("333"),"Please provide a valid url of the data set in the data folder in the github page!")
+  testthat::expect_error(read_raw_data("333"),"Please provide a valid path_to_file of the data set in the data folder in the docker container or github page!")
 
 
 })

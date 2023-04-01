@@ -2,21 +2,24 @@
 % Please edit documentation in R/read_raw_data.R
 \name{read_raw_data}
 \alias{read_raw_data}
-\title{This function takes in a url to where the file located and read the data}
+\title{This function takes in a URL to where the file located in our Github page or
+a path to the file saved locally  and read the data}
 \usage{
-read_raw_data(url)
+read_raw_data(path_to_file)
 }
 \arguments{
-\item{url}{The URL to where the file is located}
+\item{path_to_file}{The path_to_file to where the file is located}
 }
 \value{
 a data frame that contains raw data in the file
 }
 \description{
-This function takes in a url to where the file located and read the data
+This function takes in a URL to where the file located in our Github page or
+a path to the file saved locally  and read the data
 }
 \examples{
 data0007 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt")
 data0107 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0107.txt")
+# data0107 <- read_raw_data("/home/rstudio/data/0107.txt")
 
 }
