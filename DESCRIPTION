@@ -2,7 +2,7 @@ Package: youtubeFunction
 Title: Functions That Supports Creating the Report of Youtube Data Set
 Version: 0.0.0.9000
 Authors@R: 
-    c(person("First", "Last", , "first.last@example.com", role = c("aut", "cre")), 
+    c(person("Chris", "Cai", , "caikehan@student.ubc.ca", role = c("aut", "cre")), 
     person("First", "Last", , "first.last@example.com", role = c("aut")),
     person("First", "Last", , "first.last@example.com", role = c("aut")))
 Description: This package can read raw data from our github page, clean the raw data, read the cleaned data, and perform modeling of the cleaned data.
