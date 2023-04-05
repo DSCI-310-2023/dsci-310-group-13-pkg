@@ -18,7 +18,7 @@ You can install the development version of youtubeFunction from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("chris-ckh/dsci-310-group-13_functions")
+devtools::install_github("chris-ckh/dsci-310-group-13-pkg")
 ```
 
 ## Usage
