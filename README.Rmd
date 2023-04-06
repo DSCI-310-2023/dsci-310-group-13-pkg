@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.Rmd. Please edit this file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -59,3 +59,9 @@ The function wrangling_data() takes in an uncleaned youtube data set and tidies 
 ## "/home/rstudio/data/" is the path to where the uncleaned data is saved
 ## data2007 <- wrangling_data(data2007_uncleaned)
 ```
+
+The function fit_regression() takes in the training data and fits a simple linear regression to said data with the response variable `views`.
+```{r, fit_regression}
+lm <- fit_regression(training)
+```
+
