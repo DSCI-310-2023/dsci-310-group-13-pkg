@@ -2,7 +2,7 @@ library(tidyverse)
 #' The function accepts the wrangled Youtube dataset of type dataframe and fits a linear regression
 #' model to the data.
 #'
-#' @param traindata: Typically a portion of the dataset that is used for training a regression model
+#' @param traindata Typically a portion of the dataset that is used for training a regression model
 #'
 #' @returns a linear regression model with 'views' as the response variable and the chosen variables
 #' as the explanatory variables
