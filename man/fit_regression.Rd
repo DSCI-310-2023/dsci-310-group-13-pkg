@@ -8,7 +8,7 @@ model to the data.}
 fit_regression(traindata)
 }
 \arguments{
-\item{traindata:}{Typically a portion of the dataset that is used for training a regression model}
+\item{traindata}{Typically a portion of the dataset that is used for training a regression model}
 }
 \value{
 a linear regression model with 'views' as the response variable and the chosen variables
