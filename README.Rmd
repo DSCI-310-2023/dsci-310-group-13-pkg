@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 # youtubeFunction
 
 <!-- badges: start -->
+![](https://github.com/chris-ckh/dsci-310-group-13-pkg/actions/workflows/test-coverage.yaml/badge.svg)
 <!-- badges: end -->
 
 The goal of youtubeFunction is to build functions that are used for DSCI-310 group 13 term project. This package includes functions that read raw data, read unclenaed data, clean the data, bind tables, and fit the model. 
@@ -51,7 +52,7 @@ The function read_uncleaned_data() takes in an path to read a saved out uncleane
 
 ```{r uncleaned}
 ## "/home/rstudio/data/" is the path to where the uncleaned data is saved
-## data2007_uncleaned <- read_uncleaned_data("/home/rstudio/data/data2008_not_cleaned.txt")
+## data2007_uncleaned <- read_uncleaned_data("/home/rstudio/data/data2007_not_cleaned.txt")
 ```
 
 The function wrangling_data() takes in an uncleaned youtube data set and tidies it so that the data set only contains "age", 'category', 'length','views','rate','ratings','comments' as columns. For instance:
@@ -62,6 +63,6 @@ The function wrangling_data() takes in an uncleaned youtube data set and tidies 
 
 The function fit_regression() takes in the training data and fits a simple linear regression to said data with the response variable `views`.
 ```{r, fit_regression}
-lm <- fit_regression(training)
+## lm <- fit_regression(training)
 ```
 
