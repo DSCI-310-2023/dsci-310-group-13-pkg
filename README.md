@@ -4,6 +4,8 @@
 # youtubeFunction
 
 <!-- badges: start -->
+
+![](https://github.com/chris-ckh/dsci-310-group-13-pkg/actions/workflows/test-coverage.yaml/badge.svg)
 <!-- badges: end -->
 
 The goal of youtubeFunction is to build functions that are used for
@@ -28,6 +30,7 @@ the data folder from our Github page :
 
 ``` r
 library(youtubeFunction)
+## This example reads part of the 2007 raw YouTube data
 ## table0007 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt")
 ```
 
@@ -44,8 +47,8 @@ The function read_uncleaned_data() takes in an path to read a saved out
 uncleaned data set from load.R, for example:
 
 ``` r
-## "/home/rstudio/data/" is the path to where the uncleaned data is saved
-## data2007_uncleaned <- read_uncleaned_data("/home/rstudio/data/data2008_not_cleaned.txt")
+## "/home/rstudio/data/" is the path to where the uncleaned data is saved in the container
+## data2007_uncleaned <- youtubeFunction::read_uncleaned_data("/home/rstudio/data/data2007_not_cleaned.txt")
 ```
 
 The function wrangling_data() takes in an uncleaned youtube data set and
@@ -54,5 +57,13 @@ tidies it so that the data set only contains “age”, ‘category’,
 
 ``` r
 ## "/home/rstudio/data/" is the path to where the uncleaned data is saved
-## data2007 <- wrangling_data(data2007_uncleaned)
+## data2007 <- youtubeFunction::wrangling_data(data2007_uncleaned)
+```
+
+The function fit_regression() takes in the training data and fits a
+simple linear regression to said data with the response variable
+`views`.
+
+``` r
+## lm <- youtubeFunction::fit_regression(training)
 ```
