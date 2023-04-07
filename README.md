@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit this file -->
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # youtubeFunction
 
