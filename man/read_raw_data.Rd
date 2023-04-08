@@ -18,8 +18,8 @@ This function takes in a URL to where the file located in our Github page or
 a path to the file saved locally  and read the data
 }
 \examples{
-data0007 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt")
-data0107 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0107.txt")
+data0007 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt")
+data0107 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0107.txt")
 # data0107 <- read_raw_data("/home/rstudio/data/0107.txt")
 
 }

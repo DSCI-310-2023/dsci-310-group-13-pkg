@@ -1,4 +1,4 @@
-data2007 = read_uncleaned_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/uncleaned_data_2007_function_test_only")
+data2007 = read_uncleaned_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/uncleaned_data_2007_function_test_only")
 data2007 = wrangling_data(data2007)
 
 #Testing fit_regression()
