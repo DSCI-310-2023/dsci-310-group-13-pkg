@@ -38,7 +38,7 @@ The function read_raw_data() takes in an URL to one of raw data sets in the data
 ```{r raw,warning=FALSE, message=FALSE}
 library(youtubeFunction)
 ## This example reads part of the 2007 raw YouTube data
-## table0007 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt")
+## table0007 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt")
 ```
 
 The function bind_tables() takes in four tables that contains Youtube data for one year, and binds them into one table:
