@@ -31,7 +31,7 @@ the data folder from our Github page :
 ``` r
 library(youtubeFunction)
 ## This example reads part of the 2007 raw YouTube data
-## table0007 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt")
+## table0007 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt")
 ```
 
 The function bind_tables() takes in four tables that contains Youtube

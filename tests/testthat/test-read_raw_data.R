@@ -1,5 +1,5 @@
-table0007 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt")
-table0308 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0308.txt")
+table0007 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt")
+table0308 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0308.txt")
 
 test_that("read_raw_data reads data correctly", {
   testthat::expect_equal(nrow(table0007), 227)

@@ -7,20 +7,20 @@
 #' @export
 #'
 #' @examples
-#' data0007 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt")
-#' data0107 <- read_raw_data("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0107.txt")
+#' data0007 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt")
+#' data0107 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0107.txt")
 #' # data0107 <- read_raw_data("/home/rstudio/data/0107.txt")
 #'
 
 read_raw_data <- function(path_to_file){
-  file_paths <- list("https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0007.txt",
-                     "https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0107.txt",
-                     "https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0207.txt",
-                     "https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0307.txt",
-                     "https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0008.txt",
-                     "https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0108.txt",
-                     "https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0208.txt",
-                     "https://raw.githubusercontent.com/chris-ckh/dsci-310-group-13/main/data/0308.txt",
+  file_paths <- list("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt",
+                     "https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0107.txt",
+                     "https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0207.txt",
+                     "https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0307.txt",
+                     "https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0008.txt",
+                     "https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0108.txt",
+                     "https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0208.txt",
+                     "https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0308.txt",
                      "/home/rstudio/data/0007.txt", "/home/rstudio/data/0107.txt",
                      "/home/rstudio/data/0207.txt", "/home/rstudio/data/0307.txt",
                      "/home/rstudio/data/0008.txt", "/home/rstudio/data/0108.txt",
