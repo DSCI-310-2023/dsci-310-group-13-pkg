@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-![](https://github.com/chris-ckh/dsci-310-group-13-pkg/actions/workflows/test-coverage.yaml/badge.svg)
+![](https://github.com/DSCI-310/dsci-310-group-13-pkg/actions/workflows/test-coverage.yaml/badge.svg)
 <!-- badges: end -->
 
 The goal of youtubeFunction is to build functions that are used for
@@ -20,7 +20,7 @@ You can install the development version of youtubeFunction from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("chris-ckh/dsci-310-group-13-pkg")
+devtools::install_github("DSCI-310/dsci-310-group-13-pkg")
 ```
 
 ## Usage
