@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 ![](https://github.com/DSCI-310/dsci-310-group-13-pkg/actions/workflows/test-coverage.yaml/badge.svg)
+[![codecov](https://codecov.io/gh/DSCI-310/dsci-310-group-13-pkg/branch/main/graph/badge.svg?token=akuR6bS6ic)](https://codecov.io/gh/DSCI-310/dsci-310-group-13-pkg)
+
 <!-- badges: end -->
 
 The goal of youtubeFunction is to build functions that are used for
