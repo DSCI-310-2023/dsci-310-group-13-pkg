@@ -45,4 +45,9 @@ test_that("wrangling_data() not changing wanted data", {
                          dplyr::select(data2008_test, c('comments'))[62101,])
 })
 
+test_that("wrangling_data() creates error message", {
+  testthat::expect_error(wrangling_data(""), "Please have a valid dataframe as input!")
+  testthat::expect_error(wrangling_data(7), "Please have a valid dataframe as input!")
+})
+
 rm(list = ls())
