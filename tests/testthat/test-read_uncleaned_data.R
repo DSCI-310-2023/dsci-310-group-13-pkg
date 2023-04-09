@@ -22,8 +22,8 @@ data2008_test <- bind_tables(table0008,table0108,table0208, table0308)
 colnames(data2008_test) <- youtube_col_names
 
 
-uncleaned_2007 <- read_uncleaned_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/uncleaned_data_2007_function_test_only")
-uncleaned_2008 <- read_uncleaned_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/uncleaned_data_2008_function_test_only")
+uncleaned_2007 <- read_uncleaned_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/datatable2007_uncleaned.txt")
+uncleaned_2008 <- read_uncleaned_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/datatable2008_uncleaned.txt")
 
 test_that("read_uncleaned_data works properly", {
   testthat::expect_equal(ncol(uncleaned_2007), ncol(data2007_test))
