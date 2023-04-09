@@ -1,6 +1,6 @@
 Package: youtubeFunction
 Title: Functions That Supports Creating the Report of Youtube Data Set
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     c(person("Chris", "Cai", , "caikehan@student.ubc.ca", role = c("aut", "cre")), 
     person("Maggie", "Dong", , "maggdong20@gmail.com", role = c("aut")),
