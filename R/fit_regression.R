@@ -1,4 +1,3 @@
-library(tidyverse)
 #' The function accepts the wrangled Youtube dataset of type dataframe and fits a linear regression
 #' model to the data.
 #'
