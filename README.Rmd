@@ -30,8 +30,8 @@ The goal of youtubeFunction is to build functions that are used for DSCI-310 gro
 
 ### Functions included:
 - `read_raw_data()`
-- `read_uncleaned_data()`
 - `bind_tables()`
+- `read_uncleaned_data()`
 - `wrangling_data()`
 - `fit_regression()`
 

@@ -25,8 +25,8 @@ practical other than in this project.
 ### Functions included:
 
 - `read_raw_data()`
-- `read_uncleaned_data()`
 - `bind_tables()`
+- `read_uncleaned_data()`
 - `wrangling_data()`
 - `fit_regression()`
 
@@ -170,5 +170,5 @@ lm_fit
 #> 
 #> Coefficients:
 #> (Intercept)          age      ratings     comments  
-#>    14014.47       -18.20       239.50        51.49
+#>    14584.79       -18.97       244.67        44.39
 ```
