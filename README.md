@@ -170,7 +170,7 @@ train data and test data, where the train data is used to fit the model
 used for our prediction.
 
 ``` r
-datareduced <- data2007 |>  select(c(views,age,ratings,comments))
+datareduced <- data2007 |>  dplyr::select(c(views,age,ratings,comments))
 split <- rsample::initial_split(datareduced, prop = 3/4, strata = views)
 train <- rsample::training(split)
 test <- rsample::testing(split)
@@ -197,5 +197,5 @@ lm_fit
 #> 
 #> Coefficients:
 #> (Intercept)          age      ratings     comments  
-#>    15213.94       -19.24       259.13       -29.62
+#>    13884.57       -17.78       225.80        62.71
 ```
