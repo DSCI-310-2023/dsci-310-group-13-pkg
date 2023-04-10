@@ -24,6 +24,4 @@ Imports:
     rsample,
     workflows,
     yardstick
-Depends: 
-    tidyverse (>= 1.3.2)
 VignetteBuilder: knitr
