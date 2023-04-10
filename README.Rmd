@@ -26,7 +26,10 @@ knitr::opts_chunk$set(
 # youtubeFunction (1.0.0)
 
 
-The goal of youtubeFunction is to build functions that are used for DSCI-310 group 13 term project instead of using repetitive lines of codes. The functions in this package are built on functions in other packages, such as tidyverse, dplyr, parsnip, workflows, etc. These functions have similar abilities as their built-on functions; however, they have more specific functionalities, such as: reading specific data from the container we built, cleaning the data in a specific way, and fit the model in a specific workflow. Therefore, this package may not be practical other than in this project.  
+The goal of youtubeFunction is to build functions that are used for DSCI-310 group 13 term project instead of using repetitive lines of codes. The functions in this package are built on functions in other packages, such as tidyverse, dplyr, parsnip, workflows, etc. These functions have similar abilities as their built-on functions; however, they have more specific functionalities, such as: reading specific data from the container we built, cleaning the data in a specific way, and fitting the model in a specific workflow. Therefore, this package may not be practical other than in this project.  
+
+If you are interested at reading the vignettes for this package, you can click [here](https://dsci-310.github.io/dsci-310-group-13-pkg/articles/Intro_to_youtubeFunction.html). The vignettes are very similar to the Usage section below, but with a little bit more details on how the functions are used in the container. 
+
 
 ### Functions included:
 - `read_raw_data()`
@@ -34,6 +37,7 @@ The goal of youtubeFunction is to build functions that are used for DSCI-310 gro
 - `read_uncleaned_data()`
 - `wrangling_data()`
 - `fit_regression()`
+
 
 ## Installation
 
