@@ -23,7 +23,17 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The goal of youtubeFunction is to build functions that are used for DSCI-310 group 13 term project. This package includes functions that read raw data, read unclenaed data, clean the data, bind tables, and fit the model. 
+# youtubeFunction (1.0.0)
+
+
+The goal of youtubeFunction is to build functions that are used for DSCI-310 group 13 term project instead of using repetitive lines of codes. The functions in this package are built on functions in other packages, such as tidyverse, dplyr, parsnip, workflows, etc. These functions have similar abilities as their built-on functions; however, they have more specific functionalities, such as: reading specific data from the container we built, cleaning the data in a specific way, and fit the model in a specific workflow. Therefore, this package may not be practical other than in this project.  
+
+### Functions included:
+- `read_raw_data()`
+- `bind_tables()`
+- `read_uncleaned_data()`
+- `wrangling_data()`
+- `fit_regression()`
 
 ## Installation
 
@@ -35,38 +45,83 @@ devtools::install_github("DSCI-310/dsci-310-group-13-pkg")
 ```
 
 ## Usage
+\
 
-The function read_raw_data() takes in an URL to one of raw data sets in the data folder from our Github page :
+### read_raw_data()
 
+The function read_raw_data() read the URL of specific data sets from our project repository on [Github](https://github.com/DSCI-310/dsci-310-group-13) or an absolute path to the data files stored in our Docker container:
 ```{r raw,warning=FALSE, message=FALSE}
 library(youtubeFunction)
-## This example reads part of the 2007 raw YouTube data
-## table0007 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt")
+## This example reads the raw data sets for 2007 YouTube data
+table0007 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0007.txt")
+table0107 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0107.txt")
+table0207 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0207.txt")
+table0307 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0307.txt")
 ```
 
-The function bind_tables() takes in four tables that contains Youtube data for one year, and binds them into one table:
+\
+
+### bind_tables()
+
+The function bind_tables() takes in four tables that contains Youtube data for one year, binds them into one table, and omit the rows with NA:
 
 ```{r bind,warning=FALSE, message=FALSE}
 library(youtubeFunction)
 ## This examples binds tables that contains YouTube data for 2007 into one table 
-## data2007_uncleaned <- bind_tables(table0007,table0107,table0207, table0307)
+data2007_uncleaned <- bind_tables(table0007,table0107,table0207, table0307)
+
+## change the column names of the dataset to meaningful ones
+youtube_col_names <- c("Video ID", "uploader", "age", 'category','length',
+                       'views','rate','ratings','comments','related IDs')
+colnames(data2007_uncleaned) <- youtube_col_names
+
+## show the first five rows of the raw data for 2007 with changed column names
+head(data2007_uncleaned)
 ```
 
-The function read_uncleaned_data() takes in an path to read a saved out uncleaned data set from load.R, for example:
+\
+
+### read_uncleaned_data()
+
+The function read_uncleaned_data() takes in an absolute path to read a saved out uncleaned data set from load.R, which reads in the raw data tables, combines those tables based on the year the data belongs to, and write out as txt files in the container, for example:
 
 ```{r uncleaned,warning=FALSE, message=FALSE}
-## "/home/rstudio/data/" is the path to where the uncleaned data is saved in the container
+## This is an example of how read_uncleaned_data() is used in the container
+## where "/home/rstudio/data/" is the path to where the uncleaned data is saved in the container
+
 ## data2007_uncleaned <- youtubeFunction::read_uncleaned_data("/home/rstudio/data/data2007_not_cleaned.txt")
 ```
 
-The function wrangling_data() takes in an uncleaned youtube data set and tidies it so that the data set only contains "age", 'category', 'length','views','rate','ratings','comments' as columns. For instance:
+\
+
+### wrangling_data()
+
+The function wrangling_data() takes in an uncleaned youtube data set and tidies it so that the data set only contains "age", "category", "length", "views", "rate", "ratings", "comments" as columns. For instance:
+
 ```{r wrangling,warning=FALSE, message=FALSE}
-## "/home/rstudio/data/" is the path to where the uncleaned data is saved
-## data2007 <- youtubeFunction::wrangling_data(data2007_uncleaned)
+## This is an example of using wrangling_data() to tidy up the 
+## uncleaned YouTube data for 2007
+data2007 <- youtubeFunction::wrangling_data(data2007_uncleaned)
+head(data2007)
 ```
 
-The function fit_regression() takes in the training data and fits a simple linear regression to said data with the response variable `views`.
+\
+
+### fit_regression()
+
+The following R chunk prepossesses the data set and splits the data into train data and test data, where the train data is used to fit the model used for our prediction.
+
+```{r, split,warning=FALSE, message=FALSE}
+datareduced <- data2007 |>  select(c(views,age,ratings,comments))
+split <- rsample::initial_split(datareduced, prop = 3/4, strata = views)
+train <- rsample::training(split)
+test <- rsample::testing(split)
+```
+
+
+The function fit_regression() takes in the training data and fits a simple linear regression to chosen columns with the response variable `views`.
 ```{r, fit_regression,warning=FALSE, message=FALSE}
-## lm <- youtubeFunction::fit_regression(training)
+lm_fit <- fit_regression(train)
+lm_fit 
 ```
 
