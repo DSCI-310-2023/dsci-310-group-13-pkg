@@ -116,7 +116,7 @@ head(data2007)
 The following R chunk prepossesses the data set and splits the data into train data and test data, where the train data is used to fit the model used for our prediction.
 
 ```{r, split,warning=FALSE, message=FALSE}
-datareduced <- data2007 |>  select(c(views,age,ratings,comments))
+datareduced <- data2007 |>  dplyr::select(c(views,age,ratings,comments))
 split <- rsample::initial_split(datareduced, prop = 3/4, strata = views)
 train <- rsample::training(split)
 test <- rsample::testing(split)
