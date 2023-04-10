@@ -42,6 +42,10 @@ devtools::install_github("DSCI-310/dsci-310-group-13-pkg")
 
 ## Usage
 
+  
+
+### read_raw_data()
+
 The function read_raw_data() read the URL of specific data sets from our
 project repository on
 [Github](https://github.com/DSCI-310/dsci-310-group-13) or an absolute
@@ -55,6 +59,10 @@ table0107 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-
 table0207 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0207.txt")
 table0307 <- read_raw_data("https://raw.githubusercontent.com/DSCI-310/dsci-310-group-13/main/data/0307.txt")
 ```
+
+  
+
+### bind_tables()
 
 The function bind_tables() takes in four tables that contains Youtube
 data for one year, binds them into one table, and omit the rows with NA:
@@ -108,6 +116,10 @@ head(data2007_uncleaned)
 #> 6 DVEnPIxJJYo hhfhgbmZe9s 3hWnA2dgE-M
 ```
 
+  
+
+### read_uncleaned_data()
+
 The function read_uncleaned_data() takes in an absolute path to read a
 saved out uncleaned data set from load.R, which reads in the raw data
 tables, combines those tables based on the year the data belongs to, and
@@ -119,6 +131,10 @@ write out as txt files in the container, for example:
 
 ## data2007_uncleaned <- youtubeFunction::read_uncleaned_data("/home/rstudio/data/data2007_not_cleaned.txt")
 ```
+
+  
+
+### wrangling_data()
 
 The function wrangling_data() takes in an uncleaned youtube data set and
 tidies it so that the data set only contains “age”, “category”,
@@ -137,6 +153,10 @@ head(data2007)
 #> 5 807          Sports     99   92520 2.32      78      155
 #> 6 807   Entertainment     28  115085 3.73      84      207
 ```
+
+  
+
+### fit_regression()
 
 The following R chunk prepossesses the data set and splits the data into
 train data and test data, where the train data is used to fit the model
@@ -170,5 +190,5 @@ lm_fit
 #> 
 #> Coefficients:
 #> (Intercept)          age      ratings     comments  
-#>    14584.79       -18.97       244.67        44.39
+#>    14670.41       -19.14       236.96        59.20
 ```
