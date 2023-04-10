@@ -19,8 +19,14 @@ packages, such as tidyverse, dplyr, parsnip, workflows, etc. These
 functions have similar abilities as their built-on functions; however,
 they have more specific functionalities, such as: reading specific data
 from the container we built, cleaning the data in a specific way, and
-fit the model in a specific workflow. Therefore, this package may not be
-practical other than in this project.
+fitting the model in a specific workflow. Therefore, this package may
+not be practical other than in this project.
+
+If you are interested at reading the **vignettes** for this package on
+*a pkgdown site*, you can click
+[here](https://dsci-310.github.io/dsci-310-group-13-pkg/articles/Intro_to_youtubeFunction.html).
+The vignettes are very similar to the Usage section below, but with a
+little bit more details on how the functions are used in the container.
 
 ### Functions included:
 
@@ -191,5 +197,5 @@ lm_fit
 #> 
 #> Coefficients:
 #> (Intercept)          age      ratings     comments  
-#>    14405.01       -18.27       207.87        63.18
+#>    15213.94       -19.24       259.13       -29.62
 ```

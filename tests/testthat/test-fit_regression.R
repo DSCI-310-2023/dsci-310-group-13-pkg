@@ -3,7 +3,7 @@ data2007 = wrangling_data(data2007)
 
 #Testing fit_regression()
 # Selecting variables for reduced model
-datareduced <- data2007 |>  select(c(views,age,ratings,comments))
+datareduced <- data2007 |>  dplyr::select(c(views,age,ratings,comments))
 
 # Split data into training and testing set
 split <- rsample::initial_split(datareduced, prop = 3/4, strata = views)
@@ -13,7 +13,7 @@ test <- rsample::testing(split)
 # Fit the regression model
 lm_fit <- fit_regression(train)
 # The results our model performed
-lm_test_results <- lm_fit |> predict(test) |> bind_cols(test) |> yardstick::metrics(truth = views, estimate = .pred)
+lm_test_results <- lm_fit |> predict(test) |> dplyr::bind_cols(test) |> yardstick::metrics(truth = views, estimate = .pred)
 
 test_that("fit_regression expects error", {
   #test if parameter is a data frame
