@@ -99,7 +99,8 @@ The function read_uncleaned_data() takes in an absolute path to read a saved out
 The function wrangling_data() takes in an uncleaned youtube data set and tidies it so that the data set only contains "age", "category", "length", "views", "rate", "ratings", "comments" as columns. For instance:
 
 ```{r wrangling,warning=FALSE, message=FALSE}
-## This is an example of using wrangling_data() to tidy up the uncleaned YouTube for 
+## This is an example of using wrangling_data() to tidy up the 
+## uncleaned YouTube data for 2007
 data2007 <- youtubeFunction::wrangling_data(data2007_uncleaned)
 head(data2007)
 ```

@@ -142,7 +142,8 @@ tidies it so that the data set only contains “age”, “category”,
 instance:
 
 ``` r
-## This is an example of using wrangling_data() to tidy up the uncleaned YouTube for 
+## This is an example of using wrangling_data() to tidy up the 
+## uncleaned YouTube data for 2007
 data2007 <- youtubeFunction::wrangling_data(data2007_uncleaned)
 head(data2007)
 #>   age        category length   views rate ratings comments
@@ -190,5 +191,5 @@ lm_fit
 #> 
 #> Coefficients:
 #> (Intercept)          age      ratings     comments  
-#>    14670.41       -19.14       236.96        59.20
+#>    14405.01       -18.27       207.87        63.18
 ```
