@@ -121,8 +121,9 @@ write out as txt files in the container, for example:
 ```
 
 The function wrangling_data() takes in an uncleaned youtube data set and
-tidies it so that the data set only contains “age”, ‘category’,
-‘length’,‘views’,‘rate’,‘ratings’,‘comments’ as columns. For instance:
+tidies it so that the data set only contains “age”, “category”,
+“length”, “views”, “rate”, “ratings”, “comments” as columns. For
+instance:
 
 ``` r
 ## This is an example of using wrangling_data() to tidy up the uncleaned YouTube for 
@@ -149,7 +150,7 @@ test <- rsample::testing(split)
 ```
 
 The function fit_regression() takes in the training data and fits a
-simple linear regression to said data with the response variable
+simple linear regression to chosen columns with the response variable
 `views`.
 
 ``` r
@@ -169,5 +170,5 @@ lm_fit
 #> 
 #> Coefficients:
 #> (Intercept)          age      ratings     comments  
-#>    13943.59       -18.17       248.40        47.15
+#>    14014.47       -18.20       239.50        51.49
 ```

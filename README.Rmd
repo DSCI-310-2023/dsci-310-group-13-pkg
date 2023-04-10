@@ -82,7 +82,7 @@ The function read_uncleaned_data() takes in an absolute path to read a saved out
 ```
 
 
-The function wrangling_data() takes in an uncleaned youtube data set and tidies it so that the data set only contains "age", 'category', 'length','views','rate','ratings','comments' as columns. For instance:
+The function wrangling_data() takes in an uncleaned youtube data set and tidies it so that the data set only contains "age", "category", "length", "views", "rate", "ratings", "comments" as columns. For instance:
 
 ```{r wrangling,warning=FALSE, message=FALSE}
 ## This is an example of using wrangling_data() to tidy up the uncleaned YouTube for 
@@ -100,7 +100,7 @@ test <- rsample::testing(split)
 ```
 
 
-The function fit_regression() takes in the training data and fits a simple linear regression to said data with the response variable `views`.
+The function fit_regression() takes in the training data and fits a simple linear regression to chosen columns with the response variable `views`.
 ```{r, fit_regression,warning=FALSE, message=FALSE}
 lm_fit <- fit_regression(train)
 lm_fit 
